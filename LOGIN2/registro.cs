@@ -37,7 +37,7 @@ namespace LOGIN2
             {
                 conn.Open();
                 //PARA SABER SI EL USUARIO YA EXISTE
-                string consultar = "SELECT COUNT(*) FROM USUARIO WHERE usuario = @usuario";
+                string consultar = "SELECT COUNT(*) FROM USUARIOS WHERE usuario = @usuario";
                 using (SqlCommand comando = new SqlCommand(consultar, conn))
                 {
                     comando.Parameters.AddWithValue("@usuario", usuario);
@@ -56,19 +56,23 @@ namespace LOGIN2
                 }
 
                 //para registrar
-                string mostrar = "INSERT INTO USUARIO (nombre, usuario, email, contraseña) VALUES (@nombre, @usuario, @email, @contraseña)";
+                string mostrar = "INSERT INTO USUARIOS (nombre, usuario, email, contraseña) VALUES (@nombre, @usuario, @email, @contraseña)";
                 using (SqlCommand comando = new SqlCommand(mostrar, conn))
                 {
                     comando.Parameters.AddWithValue("@nombre", nombre);
                     comando.Parameters.AddWithValue("@usuario", usuario);
-                    comando.Parameters.AddWithValue("@contraseña", contraseña);
                     comando.Parameters.AddWithValue("@email", email);
-
-                    
+                    comando.Parameters.AddWithValue("@contraseña", contraseña);
 
                     conn.Open();
-                    comando.ExecuteNonQuery();
-                    conn.Close();
+                    int rowsAffect = comando.ExecuteNonQuery();
+                    if (rowsAffect > 0)
+                    {
+                        MessageBox.Show("REGISTRO CORRECTO");
+                        Form1 registroForm = new Form1();
+                        registroForm.Show();
+                        this.Hide();
+                    }
 
                 }
             }

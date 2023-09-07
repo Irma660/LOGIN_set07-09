@@ -26,7 +26,7 @@ namespace LOGIN2
             using (SqlConnection conn = new SqlConnection(conexion))
             {
                 conn.Open();
-                string entrada = "SELECT COUNT (*) FROM USUARIO WHERE usuario = @usuario and contraseña = @contraseña";
+                string entrada = "SELECT COUNT (*) FROM USUARIOS WHERE usuario = @usuario and contraseña = @contraseña";
                 SqlCommand comando = new SqlCommand(entrada,conn);
                 comando.Parameters.AddWithValue("@usuario", usuario);
                 comando.Parameters.AddWithValue("@contraseña", contraseña);
