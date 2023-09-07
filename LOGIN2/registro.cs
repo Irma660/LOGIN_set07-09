@@ -13,7 +13,7 @@ namespace LOGIN2
 {
     public partial class registro : Form
     {
-        private string Cconexion = "Data Source=DESKTOP-7LDGQBD;Initial Catalog = LOGINBD; Integrated Security = True";
+        private string conexion = "Data Source=DESKTOP-7LDGQBD;Initial Catalog=LOGINBD;Integrated Security=True";
         public registro()
         {
             InitializeComponent();
@@ -33,42 +33,42 @@ namespace LOGIN2
                 return;
             }
             //abriendo conexion
-            using (SqlConnection Cconexion = new SqlConnection("Conexion"))
+            using (SqlConnection conn = new SqlConnection(conexion))
             {
-                Cconexion.Open();
+                conn.Open();
                 //PARA SABER SI EL USUARIO YA EXISTE
                 string consultar = "SELECT COUNT(*) FROM USUARIO WHERE usuario = @usuario";
-                using (SqlCommand comando = new SqlCommand(consultar, Cconexion))
+                using (SqlCommand comando = new SqlCommand(consultar, conn))
                 {
                     comando.Parameters.AddWithValue("@usuario", usuario);
-                    Cconexion.Open();
+                  
 
                     int existe = (int)comando.ExecuteScalar();
 
                     if (existe > 0)
                     {
                         MessageBox.Show("EL USUARIO YA ES EXISTENTE, PRUEBE OTRO");
-                        Cconexion.Close();
+                        conn.Close();
                         return;
                     }
                     //cerrar conexion
-                    Cconexion.Close();
+                    conn.Close();
                 }
-
 
                 //para registrar
                 string mostrar = "INSERT INTO USUARIO (nombre, usuario, email, contraseña) VALUES (@nombre, @usuario, @email, @contraseña)";
-                using (SqlCommand comando = new SqlCommand(mostrar, Cconexion))
+                using (SqlCommand comando = new SqlCommand(mostrar, conn))
                 {
                     comando.Parameters.AddWithValue("@nombre", nombre);
                     comando.Parameters.AddWithValue("@usuario", usuario);
                     comando.Parameters.AddWithValue("@contraseña", contraseña);
                     comando.Parameters.AddWithValue("@email", email);
 
+                    
 
-                    Cconexion.Open();
+                    conn.Open();
                     comando.ExecuteNonQuery();
-                    Cconexion.Close();
+                    conn.Close();
 
                 }
             }

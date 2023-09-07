@@ -36,7 +36,6 @@ namespace LOGIN2
 
                 if (mostrar > 0 )
                 {
-                    MessageBox.Show("INICIÓ SESIÓN");
 
                     bienvenido registroForm = new bienvenido();
                     registroForm.Show();

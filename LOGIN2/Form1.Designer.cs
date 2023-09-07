@@ -48,9 +48,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 90);
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(106, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(67, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "LOGIN";
             // 
@@ -73,6 +75,7 @@
             // 
             // btnINICIO
             // 
+            this.btnINICIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnINICIO.Location = new System.Drawing.Point(179, 206);
             this.btnINICIO.Name = "btnINICIO";
             this.btnINICIO.Size = new System.Drawing.Size(75, 23);
@@ -148,6 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(287, 264);
             this.Controls.Add(this.btnregistrarse);
             this.Controls.Add(this.pictureBox4);

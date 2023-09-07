@@ -66,6 +66,9 @@
     <Compile Include="registro.Designer.cs">
       <DependentUpon>registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="bienvenido.resx">
+      <DependentUpon>bienvenido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
