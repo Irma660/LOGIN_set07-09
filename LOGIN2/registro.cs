@@ -26,7 +26,12 @@ namespace LOGIN2
             string email = textEmail.Text;
             string contraseña = textContraseña.Text;
 
-            
+            //CONDICIÓN PARA LLENAR TODOS LOS CAMPOS
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(contraseña))
+            {
+                MessageBox.Show("COMPLETAR TODOS LOS CAMPOS");
+                return;
+            }
 
             using (SqlConnection conexion = new SqlConnection("TConexion")) ;
             {
