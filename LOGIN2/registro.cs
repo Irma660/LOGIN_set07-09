@@ -78,5 +78,10 @@ namespace LOGIN2
             }
             MessageBox.Show("Registro exitoso");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -76,7 +76,7 @@
             // 
             // btnINICIO
             // 
-            this.btnINICIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnINICIO.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnINICIO.Location = new System.Drawing.Point(179, 206);
             this.btnINICIO.Name = "btnINICIO";
             this.btnINICIO.Size = new System.Drawing.Size(75, 23);
@@ -141,6 +141,7 @@
             // 
             // btnregistrarse
             // 
+            this.btnregistrarse.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrarse.Location = new System.Drawing.Point(12, 197);
             this.btnregistrarse.Name = "btnregistrarse";
             this.btnregistrarse.Size = new System.Drawing.Size(120, 41);
@@ -166,6 +167,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
