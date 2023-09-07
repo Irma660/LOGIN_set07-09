@@ -13,7 +13,7 @@ namespace LOGIN2
 {
     public partial class Form1 : Form
     {
-        private string conexion = "Data Source=DESKTOP-7LDGQBD;Initial Catalog = LOGINBD; Integrated Security = True";
+        private string conexion = "Data Source=DESKTOP-7LDGQBD;Initial Catalog=LOGINBD;Integrated Security=True";
         public Form1()
         {
             InitializeComponent();
@@ -21,17 +21,26 @@ namespace LOGIN2
         private void btnINICIO_Click(object sender, EventArgs e)
         {
             string usuario = textUsuario.Text;
-            string nombre = textNombre.Text;
             string contraseña = textContraseña.Text;
 
-            using(SqlConnection con = new SqlConnection(conexion))
+            using (SqlConnection conn = new SqlConnection(conexion))
             {
-                con.Open();
-                string entrada = "SELECT COUNT (*) FROM USUARIO WHERE nombre = @nombre , usuario = @usuario and contraseña = @contraseña";
-                SqlCommand comando = new SqlCommand(entrada,con);
+                conn.Open();
+                string entrada = "SELECT COUNT (*) FROM USUARIO WHERE usuario = @usuario and contraseña = @contraseña";
+                SqlCommand comando = new SqlCommand(entrada,conn);
                 comando.Parameters.AddWithValue("@usuario", usuario);
-                comando.Parameters.AddWithValue("@nombre", nombre);
                 comando.Parameters.AddWithValue("@contraseña", contraseña);
+
+
+                int mostrar = (int)comando.ExecuteScalar();
+
+                if (mostrar > 0 )
+                {
+                    MessageBox.Show("INICIÓ SESIÓN");
+                }else
+                {
+                    MessageBox.Show("INVÁLIDO");
+                }
             }
         }
 
@@ -46,6 +55,21 @@ namespace LOGIN2
 
         }
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnregistrarse_Click(object sender, EventArgs e)
+        {
+            registro registroForm = new registro();
+            registroForm.ShowDialog();
+            
+        }
     }
 }
