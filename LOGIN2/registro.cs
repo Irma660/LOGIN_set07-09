@@ -33,9 +33,28 @@ namespace LOGIN2
                 return;
             }
 
-            using (SqlConnection conexion = new SqlConnection("TConexion")) ;
+            using (SqlConnection conexion = new SqlConnection("TConexion")) 
             {
-                string mostrar = "INSERT INTO USUARIO (nombre, usuario, email, contraseña) VALUES (@nombre, @usuario, @email, @contraseña)";
+                //PARA SABER SI EL USUARIO YA EXISTE
+                string consultar = "SELECT COUNT(*) FROM USUARIO WHERE usuario = @usuario";
+                using (SqlCommand comando = new SqlCommand(consultar, conexion))
+                {
+                    comando.Parameters.AddWithValue("@usuario", usuario);
+                    conexion.Open();
+
+                    int existe = (int)comando.ExecuteScalar();
+
+                    if (existe > 0)
+                    {
+                        MessageBox.Show("EL USUARIO YA ES EXISTENTE, PRUEBE OTRO");
+                        conexion.Close();
+                        return;
+                    }
+                    //cerrar conexion
+                    conexion.Close();
+                }
+
+                    string mostrar = "INSERT INTO USUARIO (nombre, usuario, email, contraseña) VALUES (@nombre, @usuario, @email, @contraseña)";
                 using (SqlCommand comando = new SqlCommand(mostrar, conexion)) 
                 {
                     comando.Parameters.AddWithValue("@nombre", nombre);
