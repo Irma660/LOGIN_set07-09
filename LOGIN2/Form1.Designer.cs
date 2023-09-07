@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnINICIO = new System.Windows.Forms.Button();
+            this.textUsuario = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textContraseña = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -66,30 +66,30 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "NOMBRE";
             // 
-            // button1
+            // btnINICIO
             // 
-            this.button1.Location = new System.Drawing.Point(183, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "INICIAR SESIÓN";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnINICIO.Location = new System.Drawing.Point(183, 276);
+            this.btnINICIO.Name = "btnINICIO";
+            this.btnINICIO.Size = new System.Drawing.Size(75, 23);
+            this.btnINICIO.TabIndex = 3;
+            this.btnINICIO.Text = "INICIAR SESIÓN";
+            this.btnINICIO.UseVisualStyleBackColor = true;
+            this.btnINICIO.Click += new System.EventHandler(this.btnINICIO_Click);
             // 
-            // textBox1
+            // textUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 127);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.textUsuario.Location = new System.Drawing.Point(158, 127);
+            this.textUsuario.Name = "textUsuario";
+            this.textUsuario.Size = new System.Drawing.Size(100, 20);
+            this.textUsuario.TabIndex = 4;
             // 
-            // textBox2
+            // textNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(158, 162);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textNombre.Location = new System.Drawing.Point(158, 162);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(100, 20);
+            this.textNombre.TabIndex = 5;
+            this.textNombre.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -100,23 +100,23 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "CONTRASEÑA";
             // 
-            // textBox3
+            // textContraseña
             // 
-            this.textBox3.Location = new System.Drawing.Point(158, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.textContraseña.Location = new System.Drawing.Point(158, 198);
+            this.textContraseña.Name = "textContraseña";
+            this.textContraseña.Size = new System.Drawing.Size(100, 20);
+            this.textContraseña.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 371);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textContraseña);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textNombre);
+            this.Controls.Add(this.textUsuario);
+            this.Controls.Add(this.btnINICIO);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -132,11 +132,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnINICIO;
+        private System.Windows.Forms.TextBox textUsuario;
+        private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textContraseña;
     }
 }
 

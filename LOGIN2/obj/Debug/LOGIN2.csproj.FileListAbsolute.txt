@@ -1,0 +1,11 @@
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\bin\Debug\LOGIN2.exe.config
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\bin\Debug\LOGIN2.exe
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\bin\Debug\LOGIN2.pdb
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.Form1.resources
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.Properties.Resources.resources
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.csproj.GenerateResource.cache
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.exe
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.pdb
