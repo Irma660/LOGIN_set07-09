@@ -9,3 +9,4 @@ C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.csproj.GenerateResou
 C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.csproj.CoreCompileInputs.cache
 C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.exe
 C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.pdb
+C:\Users\Alumno\Desktop\LOGIN SET07\LOGIN2\obj\Debug\LOGIN2.registro.resources

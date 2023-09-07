@@ -13,7 +13,7 @@ namespace LOGIN2
 {
     public partial class registro : Form
     {
-        private string conexion = "Data Source=DESKTOP-7LDGQBD;Initial Catalog=LOGINBD;Integrated Security=True";
+        private string Cconexion = "Data Source=DESKTOP-7LDGQBD;Initial Catalog = LOGINBD; Integrated Security = True";
         public registro()
         {
             InitializeComponent();
@@ -32,42 +32,47 @@ namespace LOGIN2
                 MessageBox.Show("COMPLETAR TODOS LOS CAMPOS");
                 return;
             }
-
-            using (SqlConnection conexion = new SqlConnection("TConexion")) 
+            //abriendo conexion
+            using (SqlConnection Cconexion = new SqlConnection("Conexion"))
             {
+                Cconexion.Open();
                 //PARA SABER SI EL USUARIO YA EXISTE
                 string consultar = "SELECT COUNT(*) FROM USUARIO WHERE usuario = @usuario";
-                using (SqlCommand comando = new SqlCommand(consultar, conexion))
+                using (SqlCommand comando = new SqlCommand(consultar, Cconexion))
                 {
                     comando.Parameters.AddWithValue("@usuario", usuario);
-                    conexion.Open();
+                    Cconexion.Open();
 
                     int existe = (int)comando.ExecuteScalar();
 
                     if (existe > 0)
                     {
                         MessageBox.Show("EL USUARIO YA ES EXISTENTE, PRUEBE OTRO");
-                        conexion.Close();
+                        Cconexion.Close();
                         return;
                     }
                     //cerrar conexion
-                    conexion.Close();
+                    Cconexion.Close();
                 }
 
-                    string mostrar = "INSERT INTO USUARIO (nombre, usuario, email, contraseña) VALUES (@nombre, @usuario, @email, @contraseña)";
-                using (SqlCommand comando = new SqlCommand(mostrar, conexion)) 
+
+                //para registrar
+                string mostrar = "INSERT INTO USUARIO (nombre, usuario, email, contraseña) VALUES (@nombre, @usuario, @email, @contraseña)";
+                using (SqlCommand comando = new SqlCommand(mostrar, Cconexion))
                 {
                     comando.Parameters.AddWithValue("@nombre", nombre);
                     comando.Parameters.AddWithValue("@usuario", usuario);
                     comando.Parameters.AddWithValue("@contraseña", contraseña);
                     comando.Parameters.AddWithValue("@email", email);
 
-                   
-                    conexion.Open();
+
+                    Cconexion.Open();
                     comando.ExecuteNonQuery();
-                    conexion.Close();
+                    Cconexion.Close();
 
                 }
+            }
+            MessageBox.Show("Registro exitoso");
         }
     }
 }

@@ -37,7 +37,12 @@ namespace LOGIN2
                 if (mostrar > 0 )
                 {
                     MessageBox.Show("INICIÓ SESIÓN");
-                }else
+
+                    bienvenido registroForm = new bienvenido();
+                    registroForm.Show();
+                    this.Hide();
+                }
+                else
                 {
                     MessageBox.Show("INVÁLIDO");
                 }
